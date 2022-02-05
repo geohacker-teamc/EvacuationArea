@@ -1,0 +1,34 @@
+<! DOCTYPE html>
+  <HTML>
+
+  <HEAD>
+    <META http-equiv="Content-Type" content="text/html;">
+    <TITLE></TITLE>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""></script>
+    <style>
+      #map {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </HEAD>
+
+  <BODY>
+    <div id="map"></div>
+    <script>
+      let map = L.map('map').setView([35.01795404012269, 138.38848755900565], 11); // 日本を中心に設定
+
+      let tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+        maxZoom: 19
+      });
+      tileLayer.addTo(map);
+    </script>
+  </BODY>
+
+  </HTML>
