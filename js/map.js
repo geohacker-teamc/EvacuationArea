@@ -40,8 +40,16 @@ for (let latlngs of coordinates) {
     iconUrl: './img/ng.png',
     iconSize: [30, 30],
   });
+  // SOS Messaging Badge disp
+  let sosBadgeIcon = L.divIcon({
+    className: 'sosBadge badge badge-pill badge-danger',
+    iconAnchor: [0, 0],
+  });
   L.marker(polygon.getBounds().getCenter(), {
-    icon: warningIcon
+     icon: warningIcon
+  }).addTo(map);
+  L.marker(polygon.getBounds().getCenter(), {
+    icon: sosBadgeIcon
   }).addTo(map);
 }
 
