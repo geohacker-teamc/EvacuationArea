@@ -49,6 +49,35 @@
     <div class="footer">
       <img src="./img/camera.png" style="margin-left: 20px;">
       <img src="./img/sns_icon.png" style="margin-left: 20px;width:250px;">
+      <img src="./img/post.png" style="width: 100px;cursor:pointer;" onclick="showWarningInput();">
+    </div>
+    <div id="warning_input">
+      <div style="text-align: right;"><button class="btn btn-link">住所検索</button></div>
+      <div style="text-align: center;">地図上のピンを移動して<br>危険な場所を知らせてください。</div>
+      <div style="text-align: center;"><button class="btn btn-primary" onclick="showWarningRegist();">ここに設定</button>
+      </div>
+      <div style="text-align: right;"><button class="btn btn-link" onclick="hideWarningInput();">キャンセル</button></div>
+    </div>
+    <div id="warning_input_regist">
+      <div style="text-align: center;"><button class="btn btn-link">○○町</button></div>
+      <div style="text-align: center;"><button class="btn btn-outline-primary category-btn">事故発生</button>&nbsp;<button
+          class="btn btn-outline-primary category-btn">道路水没</button>&nbsp;<button
+          class="btn btn-outline-primary category-btn">土砂災害</button></div>
+      <div style="text-align: center;height:10px;"></div>
+      <div style="text-align: center;"><button class="btn btn-outline-primary category-btn">落石</button>&nbsp;<button
+          class="btn btn-outline-primary category-btn">通行止め</button>&nbsp;<button
+          class="btn btn-outline-primary category-btn">その他</button></div>
+      <div style="text-align: center;height:10px;"></div>
+      <div style="text-align: center;"><b>危険レベル</b></div>
+      <div style="text-align: center;">
+        <input type="radio" class="Radio">とても危険&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" class="Radio">危険&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" class="Radio">危険すくない&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" class="Radio">安全&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+      <div style="text-align: center;height:10px;"></div>
+      <div style="text-align: center;"><button class="btn btn-primary" onclick="hideWarningRegist();">登録</button></div>
+      <div style="text-align: center;"><button class="btn btn-link" onclick="hideWarningRegist();">やり直す</button></div>
     </div>
     <script src="./js/map.js"></script>
     <script src="./js/sos-msg-ctrl.js"></script>
