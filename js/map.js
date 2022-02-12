@@ -1,8 +1,11 @@
+/*-------------------------------------------------------------------------
+ * onload ↓↓↓
+ -------------------------------------------------------------------------*/
 let lat = 35.03671735340955;
 let lon = 138.37646325717154;
 let zoom = 15;
 
-let map = L.map("map");
+var map = L.map("map");
 map.setView([lat, lon], zoom);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -32,6 +35,20 @@ let coordinates = [
     [35.03749, 138.37313]
   ]
 ]
+let postCount = [{
+    post: 18,
+    anonymous: 9
+  },
+  {
+    post: 5,
+    anonymous: 1
+  },
+  {
+    post: 2,
+    anonymous: 2
+  },
+]
+let iCount = 0;
 for (let latlngs of coordinates) {
   let polygon = L.polygon(latlngs, {
     color: 'red'
@@ -43,6 +60,25 @@ for (let latlngs of coordinates) {
   L.marker(polygon.getBounds().getCenter(), {
     icon: warningIcon
   }).addTo(map);
+
+  let cnt1 = postCount[iCount].post;
+  let warningBadgeIcon = L.divIcon({
+    html: '<div class="badge-style"><span class="badge badge-info">投稿<span class="badge badge-light">' + cnt1 + '</span></span></div>',
+    iconAnchor: [-30, 20],
+  });
+  L.marker(polygon.getBounds().getCenter(), {
+    icon: warningBadgeIcon
+  }).addTo(map);
+  let cnt2 = postCount[iCount].anonymous;
+  let warningAnonymousBadgeIcon = L.divIcon({
+    html: '<div class="badge-style"><span class="badge badge-danger">匿名<span class="badge badge-light">' + cnt2 + '</span></span></div>',
+    iconAnchor: [-30, 0],
+  });
+  L.marker(polygon.getBounds().getCenter(), {
+    icon: warningAnonymousBadgeIcon
+  }).addTo(map);
+
+  iCount = iCount + 1;
 }
 
 var personIcon = L.icon({
@@ -78,6 +114,31 @@ L.polyline(latlngs, {
   color: 'red'
 }).addTo(map);
 
-function login(){
-  window.location.href="./login.html"
+
+/*-------------------------------------------------------------------------
+ * method ↓↓↓
+ -------------------------------------------------------------------------*/
+function login() {
+  window.location.href = "./login.html"
+}
+
+function showWarningInput() {
+  document.getElementById("warning_input").style.display = "block";
+
+  map.on(L.Draw.Event.DRAWSTART, function (e) {
+    console.log(e)
+  });
+}
+
+function hideWarningInput() {
+  document.getElementById("warning_input").style.display = "none";
+}
+
+function showWarningRegist() {
+  document.getElementById("warning_input").style.display = "none";
+  document.getElementById("warning_input_regist").style.display = "block";
+}
+
+function hideWarningRegist() {
+  document.getElementById("warning_input_regist").style.display = "none";
 }
