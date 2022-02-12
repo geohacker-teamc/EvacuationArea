@@ -60,7 +60,7 @@ var startIcon = L.icon({
 });
 // SOS Messaging Badge disp : start 地点
 let sosBadgeIcon = L.divIcon({
-  className: 'sosBadgeStart01',
+  className: 'sosBadge',
   iconAnchor: [0, 0],
   html: '<a href="#" class="badge badge-pill badge-danger"> SOS!! <span class="badge badge-pill badge-light">2</span></a>', 
   // html: '<a href="#" class="badge badge-warning">Warning</a>',

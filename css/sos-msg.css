@@ -1,0 +1,18 @@
+/* Shrinking the sidebar from 250px to 80px and center aligining its content*/
+#sos-msg-sidepanel.active {
+    min-width: 80px;
+    max-width: 80px;
+    text-align: center;
+}
+
+/* Toggling the sidebar header content, hide the big heading [h3] and showing the small heading [strong] and vice versa*/
+#sos-msg-sidepanel .sos-msg-sidepanel-header strong {
+    display: none;
+}
+#sos-msg-sidepanel.active .sos-msg-sidepanel-header h3 {
+    display: none;
+}
+#sos-msg-sidepanel.active .sos-msg-sidepanel-header strong {
+    display: block;
+}
+
