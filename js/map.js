@@ -40,16 +40,8 @@ for (let latlngs of coordinates) {
     iconUrl: './img/ng.png',
     iconSize: [30, 30],
   });
-  // SOS Messaging Badge disp
-  let sosBadgeIcon = L.divIcon({
-    className: 'sosBadge badge badge-pill badge-danger',
-    iconAnchor: [0, 0],
-  });
   L.marker(polygon.getBounds().getCenter(), {
      icon: warningIcon
-  }).addTo(map);
-  L.marker(polygon.getBounds().getCenter(), {
-    icon: sosBadgeIcon
   }).addTo(map);
 }
 
@@ -61,12 +53,25 @@ L.marker([35.038336291468596, 138.39326479938154], {
   icon: personIcon
 }).addTo(map);
 
+// 避難開始 集合場所
 var startIcon = L.icon({
   iconUrl: './img/start.png',
   iconSize: [45, 45],
 });
+// SOS Messaging Badge disp : start 地点
+let sosBadgeIcon = L.divIcon({
+  className: 'sosBadgeStart01',
+  iconAnchor: [0, 0],
+  html: '<a href="#" class="badge badge-pill badge-danger"> SOS!! <span class="badge badge-pill badge-light">2</span></a>', 
+  // html: '<a href="#" class="badge badge-warning">Warning</a>',
+  // html: '<a href="#" class="badge badge-danger">Warning</a>',
+  iconSize: '100',
+});
 L.marker([35.04139240697257, 138.39120132321514], {
   icon: startIcon
+}).addTo(map);
+L.marker([35.04139240697257, 138.39120132321514], {
+  icon: sosBadgeIcon
 }).addTo(map);
 
 var goalIcon = L.icon({
