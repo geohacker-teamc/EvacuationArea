@@ -77,3 +77,7 @@ var latlngs = [
 L.polyline(latlngs, {
   color: 'red'
 }).addTo(map);
+
+function login(){
+  window.location.href="./login.html"
+}

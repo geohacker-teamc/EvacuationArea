@@ -1,12 +1,36 @@
+:root {
+  --header-height: 40px;
+}
+
 #map {
-  height: 100%;
+  height: calc(100% - var(--header-height));
   width: 100%;
+}
+
+.header {
+  position: relative;
+  height: var(--header-height);
+  width: 100%;
+  top: 0px;
+  vertical-align: middle;
+  background-color: black;
+  z-index: 10000;
+}
+
+.signinbtn{
+  height:100%;
+  background-color: black;
+  color: white !important;
+  cursor: hand;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .footer {
   position: absolute;
   height: 70px;
-  width: 99%;
+  width: 100%;
   bottom: 0px;
   vertical-align: middle;
   background-color: rgb(255, 255, 255);
