@@ -1,3 +1,22 @@
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sos-msg-sidepanel {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+}
+
+/*
+#sos-msg-sidepanel.active {
+    margin-left: -250px;
+}
+*/
+
 /* Shrinking the sidebar from 250px to 80px and center aligining its content*/
 #sos-msg-sidepanel.active {
     min-width: 80px;
@@ -14,5 +33,14 @@
 }
 #sos-msg-sidepanel.active .sos-msg-sidepanel-header strong {
     display: block;
+}
+
+@media (max-width: 768px) {
+    #sos-msg-sidepanel {
+        margin-left: -250px;
+    }
+    #sos-msg-sidepanel.active {
+        margin-left: 0;
+    }
 }
 
