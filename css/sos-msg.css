@@ -62,6 +62,10 @@
   color: #FBFAF5;  /* 白系 :  生成り色 */
 }
 
+.sos-msg-sidepanel-evac-place {
+  background-color: #bce2e8;  /* 水色 */
+}
+
 .sos-msg-sidepanel-comm {
   background-color: #fdeff2;  /* 薄桜 */
 }

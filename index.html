@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="./lib/bootstrap-4.5.0-dist/css/bootstrap.min.css"> -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/map.css">
     <link rel="stylesheet" href="./css/sos-msg.css">
+    <link rel="stylesheet" href="./css/sos-msg-chat.css">
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
       integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
       crossorigin=""></script>
@@ -34,8 +36,127 @@
       <!-- <strong>SOS !!</strong> -->
     </div>
     <div class="sos-msg-sidepanel-contents">
+      <div class="sos-msg-sidepanel-evac-place">
+	 <b>第１避難場所：</b>  磐田中央図書館 駐車場 
+      </div>
       <div class="sos-msg-sidepanel-comm">
-        SOS チャット
+	 <!-- リスト表示部:  ボランティア救援 に名乗りを上げている人 -->
+	 <b>SOS あなたのお助け隊 リスト</b>
+	 <!-- Reference:  https://www.bootdey.com/snippets/view/chat-app -->
+           <div class="card chat-app">
+            <div id="plist" class="people-list">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-search"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Search...">
+                </div>
+                <ul class="list-unstyled chat-list mt-2 mb-0">
+                    <li class="clearfix">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="avatar">
+                        <div class="about">
+                            <div class="name">山葉 一朗</div>
+                            <div class="status"> <i class="fa fa-circle offline"></i> オンライン:  7分前 </div>
+                        </div>
+                    </li>
+                    <li class="clearfix active">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="avatar">
+                        <div class="about">
+                            <div class="name">磐田 磐男</div>
+                            <div class="status"> <i class="fa fa-circle online"></i> オンライン </div>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="avatar">
+                        <div class="about">
+                            <div class="name">熱海 熱夫</div>
+                            <div class="status"> <i class="fa fa-circle online"></i> オンライン </div>
+                        </div>
+                    </li>                                    
+                    <li class="clearfix">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="avatar">
+                        <div class="about">
+                            <div class="name">伊豆 豆郎</div>
+                            <div class="status"> <i class="fa fa-circle offline"></i> オンライン:  40 分前  </div>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar8.png" alt="avatar">
+                        <div class="about">
+                            <div class="name">清水 由比</div>
+                            <div class="status"> <i class="fa fa-circle online"></i> オンライン </div>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="avatar">
+                        <div class="about">
+                            <div class="name">三島 由紀子</div>
+                            <div class="status"> <i class="fa fa-circle offline"></i> オンライン: 1時間前 </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+	    <!-- Chat 表示部  -->
+	    <div class="chat">
+                <div class="chat-header clearfix">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="avatar">
+                            </a>
+                            <div class="chat-about">
+                                <h6 class="m-b-0">磐田 磐男</h6>
+                                <small>オンライン</small>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 hidden-sm text-right">
+                            <a href="javascript:void(0);" class="btn btn-outline-secondary"><i class="fa fa-camera"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-image"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-outline-info"><i class="fa fa-cogs"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-outline-warning"><i class="fa fa-question"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-history">
+                    <ul class="m-b-0">
+                        <li class="clearfix">
+                            <div class="message-data text-right">
+                                <span class="message-data-time">1:10 AM, 今日</span>
+                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="avatar">
+                            </div>
+                            <div class="message other-message float-right"> SOS を確認しました。どんな助けが必要ですか？</div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="message-data">
+                                <span class="message-data-time">1:12 AM, 今日</span>
+                            </div>
+                            <div class="message my-message">通話で説明させてもらっても良いでしょうか。身体が不自由なもので。</div>                                    
+                        </li>                               
+                        <li class="clearfix">
+                            <div class="message-data text-right">
+                                <span class="message-data-time">1:13 AM, 今日</span>
+                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="avatar">
+                            </div>
+                            <div class="message other-message float-right"> 了解です。では、今こちらから掛けますね。</div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="message-data">
+                                <span class="message-data-time">1:15 AM, 今日</span>
+                            </div>
+                            <div class="message my-message"> ありがとうございます。助かります。 </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="chat-message clearfix">
+                    <div class="input-group mb-0">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-send"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Enter text here...">                                    
+                    </div>
+                </div>
+            </div>
+	   </div>
       </div>
     </div>
   </nav>
