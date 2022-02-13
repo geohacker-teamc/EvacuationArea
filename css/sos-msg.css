@@ -98,6 +98,12 @@
 }
 */
 
+@media (min-width: 510px) {
+    #sos-msg-sidepanel {
+      width: 500px;
+    }
+}
+
 /*
 @media (max-width: 768px) {
     #sos-msg-sidepanel {

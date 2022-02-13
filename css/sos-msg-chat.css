@@ -217,7 +217,7 @@ body{
         width: 100%;
         overflow-x: auto;
         background: #fff;
-        /* left: -400px; */
+        left: -400px;
         display: none
     }
     .chat-app .people-list.open {
