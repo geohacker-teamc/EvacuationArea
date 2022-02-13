@@ -1,14 +1,69 @@
-
+/*
 .wrapper {
     display: flex;
     width: 100%;
     align-items: stretch;
 }
+*/
+
+#content {
+  z-index: 10;
+  position: relative;
+  height: 100%;
+  background-color: #2D3142;
+  -webkit-transition: transform .2s ease-in-out;
+  -moz-transition: transform .2s ease-in-out;
+  -ms-transition: transform .2s ease-in-out;
+  -o-transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+}
+
+/* Set move margin of #content toward right */
+.move-to-right {
+  -webkit-transform: translateX(300px);
+  -moz-transform: translateX(300px);
+  -ms-transform: translateX(300px);
+  -o-transform: translateX(300px);
+  transform: translateX(300px);
+}
+
+/* Set move margin of #content toward left (close) :  for mobile device UI */
+/*
+.move-to-left {
+  -webkit-transform: translateX(-300px);
+  -moz-transform: translateX(-300px);
+  -ms-transform: translateX(-300px);
+  -o-transform: translateX(-300px);
+  transform: translateX(-300px);
+}
+*/
 
 #sos-msg-sidepanel {
-    min-width: 250px;
-    max-width: 250px;
-    min-height: 100vh;
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  left: 0;
+  background-color: #FFFFFC;  /* 白系 ：  胡粉ごふん色 */
+}
+
+.sos-msg-sidepanel-close-btn {
+  position: absolute;
+  right: 10;
+  font-size: 200%;
+  font-weight: bold;
+  color: #0D0015;  /* 黒系 :  漆黒 */
+}
+
+.sos-msg-sidepanel-header {
+  /* background-color: #EF8354;  /* オレンジ系 */
+  background-color: #D7003A;  /* 赤系 :  紅  */
+  color: #FBFAF5;  /* 白系 :  生成り色 */
+}
+
+.sos-msg-sidepanel-comm {
+  background-color: #fdeff2;  /* 薄桜 */
 }
 
 /*
@@ -18,13 +73,16 @@
 */
 
 /* Shrinking the sidebar from 250px to 80px and center aligining its content*/
+/*
 #sos-msg-sidepanel.active {
-    min-width: 80px;
-    max-width: 80px;
+    min-width: 250px;
+    max-width: 250px;
     text-align: center;
 }
+*/
 
 /* Toggling the sidebar header content, hide the big heading [h3] and showing the small heading [strong] and vice versa*/
+/*
 #sos-msg-sidepanel .sos-msg-sidepanel-header strong {
     display: none;
 }
@@ -34,13 +92,19 @@
 #sos-msg-sidepanel.active .sos-msg-sidepanel-header strong {
     display: block;
 }
+*/
 
+/*
 @media (max-width: 768px) {
     #sos-msg-sidepanel {
         margin-left: -250px;
     }
     #sos-msg-sidepanel.active {
+        margin-left: 250px;
+    }
+    #sos-msg-sidepanel.active {
         margin-left: 0;
     }
 }
+*/
 

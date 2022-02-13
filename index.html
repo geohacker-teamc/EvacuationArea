@@ -22,13 +22,16 @@
 </HEAD>
 
 <BODY>
-<div class="wrapper">
+<!-- <div class="wrapper"> -->
 
   <!-- SOS Messaging Side Panel -->
   <nav id="sos-msg-sidepanel">
+    <div class="sos-msg-sidepanel-control">
+      <div class="sos-msg-sidepanel-close-btn">×</div>
+    </div>
     <div class="sos-msg-sidepanel-header">
       <h3>SOS !! 連絡ボード</h3>
-      <strong>SOS !!</strong>
+      <!-- <strong>SOS !!</strong> -->
     </div>
     <div class="sos-msg-sidepanel-contents">
       <div class="sos-msg-sidepanel-comm">
@@ -42,19 +45,21 @@
 	  
     <!-- サイト Header -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">夜間集団避難たすけあい</a>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-	  <button type="button" id="sos-msg-sidepanelCollapse" class="btn btn-danger">SOS !!!</button>
-        </li>
-      </ul>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="signinbtn" onclick="login();">
-            サインイン
-          </a>
-        </li>
-      </ul>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">夜間集団避難たすけあい</a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+	    <button type="button" id="sos-msg-sidepanelCollapse" class="btn btn-danger">SOS !!!</button>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="signinbtn" onclick="login();">
+              サインイン
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <!-- 地図表示 -->
@@ -95,7 +100,7 @@
       <div style="text-align: center;"><button class="btn btn-link" onclick="hideWarningRegist();">やり直す</button></div>
     </div>
   </div>
-</div>
+  <!-- </div> -->
     <script src="./js/map.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
