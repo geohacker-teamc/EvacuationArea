@@ -20,11 +20,11 @@
 
 /* Set move margin of #content toward right */
 .move-to-right {
-  -webkit-transform: translateX(300px);
-  -moz-transform: translateX(300px);
-  -ms-transform: translateX(300px);
-  -o-transform: translateX(300px);
-  transform: translateX(300px);
+  -webkit-transform: translateX(500px);
+  -moz-transform: translateX(500px);
+  -ms-transform: translateX(500px);
+  -o-transform: translateX(500px);
+  transform: translateX(500px);
 }
 
 /* Set move margin of #content toward left (close) :  for mobile device UI */
@@ -40,7 +40,7 @@
 
 #sos-msg-sidepanel {
   height: 100%;
-  width: 300px;
+  width: 500px;
   position: fixed;
   top: 0;
   z-index: 5;
