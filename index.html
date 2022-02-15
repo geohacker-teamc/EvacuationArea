@@ -39,7 +39,7 @@
     </div>
     <div class="sos-msg-sidepanel-contents">
       <div class="sos-msg-sidepanel-evac-place">
-	 <b>第１避難場所：</b>  磐田中央図書館 駐車場 
+	 <b>第１避難場所：</b>  磐田中央図書館 駐車場
       </div>
       <div class="sos-msg-sidepanel-comm">
 	 <!-- リスト表示部:  ボランティア救援 に名乗りを上げている人 -->
@@ -74,7 +74,7 @@
                             <div class="name">熱海 熱夫</div>
                             <div class="status"> <i class="fa fa-circle online"></i> オンライン </div>
                         </div>
-                    </li>                                    
+                    </li>
                     <li class="clearfix">
                         <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="avatar">
                         <div class="about">
@@ -133,8 +133,8 @@
                             <div class="message-data">
                                 <span class="message-data-time">1:12 AM, 今日</span>
                             </div>
-                            <div class="message my-message">通話で説明させてもらっても良いでしょうか。身体が不自由なもので。</div>                                    
-                        </li>                               
+                            <div class="message my-message">通話で説明させてもらっても良いでしょうか。身体が不自由なもので。</div>
+                        </li>
                         <li class="clearfix">
                             <div class="message-data text-right">
                                 <span class="message-data-time">1:13 AM, 今日</span>
@@ -155,7 +155,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fa fa-send"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Enter text here...">                                    
+                        <input type="text" class="form-control" placeholder="Enter text here...">
                     </div>
                 </div>
             </div>
@@ -165,8 +165,8 @@
   </nav>
 
   <!-- Page Content -->
-  <div id="content">    
-	  
+  <div id="content">
+
     <!-- サイト Header -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
@@ -178,9 +178,9 @@
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="signinbtn" onclick="login();">
+            <button class="btn btn-primary" onclick="login();">
               サインイン
-            </a>
+            </button>
           </li>
         </ul>
       </div>
@@ -190,10 +190,11 @@
     <div id="map"></div>
 
     <!-- サイト Footer  -->
-    <div class="footer">
-      <img src="./img/camera.png" style="margin-left: 20px;">
-      <img src="./img/sns_icon.png" style="margin-left: 20px;width:250px;">
-      <img src="./img/post.png" style="width: 100px;cursor:pointer;" onclick="showWarningInput();">
+    <div class="footer bg-dark">
+      <!-- <img src="./img/camera.png" style="margin-left: 20px;"> -->
+      <img src="./img/post.png" style="cursor:pointer;" onclick="showWarningInput();">
+      <!-- <button class="btn btn-info">投稿</button> -->
+      <img src="./img/sns_icon.png" style="margin-left: 20px;width:230px;">
     </div>
     <div id="warning_input">
       <div style="text-align: right;"><button class="btn btn-link">住所検索</button></div>
@@ -214,10 +215,10 @@
       <div style="text-align: center;height:10px;"></div>
       <div style="text-align: center;"><b>危険レベル</b></div>
       <div style="text-align: center;">
-        <input type="radio" class="Radio">とても危険&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="radio" class="Radio">危険&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="radio" class="Radio">危険すくない&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="radio" class="Radio">安全&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" class="Radio">とても危険&nbsp;&nbsp;
+        <input type="radio" class="Radio">危険&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" class="Radio">危険すくない&nbsp;&nbsp;
+        <input type="radio" class="Radio">安全&nbsp;&nbsp;&nbsp;&nbsp;
       </div>
       <div style="text-align: center;height:10px;"></div>
       <div style="text-align: center;"><button class="btn btn-primary" onclick="hideWarningRegist();">登録</button></div>
