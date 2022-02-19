@@ -98,7 +98,7 @@ var startIcon = L.icon({
 let sosBadgeIcon = L.divIcon({
   className: 'sosBadge',
   iconAnchor: [0, 0],
-  html: '<a href="#" class="badge badge-pill badge-danger"> SOS!! <span class="badge badge-pill badge-light">2</span></a>', 
+  html: '<a href="#" class="badge badge-pill badge-danger sos-content"> SOS!! <span class="badge badge-pill badge-light">2</span></a>',
   // html: '<a href="#" class="badge badge-warning">Warning</a>',
   // html: '<a href="#" class="badge badge-danger">Warning</a>',
   iconSize: '100',
